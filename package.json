@@ -1,10 +1,44 @@
 {
   "name": "@qusd/ros-bridge-skill",
-  "version": "1.0.0",
-  "description": "Connect AI agents to ROS robots via rosbridge",
-  "main": "rosbridge-client.ts",
+  "version": "2.0.0",
+  "description": "Complete robot-to-agent pipeline. Connect any ROS robot to AI agents with full control, vision, exploration, swarm coordination, and X402 payments.",
+  "main": "src/index.ts",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./rosbridge": "./src/rosbridge-client.ts",
+    "./tools": "./src/ros-tools.ts",
+    "./vision": "./src/tools/vision.ts",
+    "./sensors": "./src/tools/sensors.ts",
+    "./exploration": "./src/tools/exploration.ts",
+    "./swarm": "./src/tools/swarm.ts",
+    "./hardware": "./src/tools/hardware.ts",
+    "./x402": "./src/x402-wrapper.ts"
+  },
+  "keywords": [
+    "ros",
+    "robotics",
+    "rosbridge",
+    "ai-agent",
+    "a2a",
+    "x402",
+    "ugv",
+    "lidar",
+    "navigation",
+    "embodied-ai"
+  ],
   "dependencies": {
-    "ws": "^8.14.0"
-  }
+    "ws": "^8.14.0",
+    "zod": "^3.22.0"
+  },
+  "peerDependencies": {
+    "@voltagent/core": ">=0.1.0",
+    "hono": ">=4.0.0",
+    "viem": ">=2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QUSD-ai/ros-bridge-skill"
+  },
+  "license": "MIT"
 }
