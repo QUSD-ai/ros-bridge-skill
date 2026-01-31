@@ -1,0 +1,10 @@
+{
+  "name": "@qusd/ros-bridge-skill",
+  "version": "1.0.0",
+  "description": "Connect AI agents to ROS robots via rosbridge",
+  "main": "rosbridge-client.ts",
+  "type": "module",
+  "dependencies": {
+    "ws": "^8.14.0"
+  }
+}
